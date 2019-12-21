@@ -1,3 +1,4 @@
+#Inventory file for AnsibleUAR
 
 [Ubuntu]
 testserver
@@ -5,16 +6,13 @@ testserver
 [Ubuntu:vars]
 ansible_host=127.0.0.1
 ansible_port=2222
-ansible_user=vagrant
-ansible_private_key_file=.vagrant/machines/default/virtualbox/private_key
 
 
 
-
-
-
-
-
-
-
+#For ansible.cfg file
+[defaults]
+inventory = hosts
+remote_user = vagrant
+private_key_file= .vagrant/machines/default/virtualbox/private_key
+host_key_checking = true
 
